@@ -1,0 +1,6 @@
+[Captcha]
+Long = 4
+Width = 80
+Height = 40
+MaxScrew = 0.8
+DotCount = 10
