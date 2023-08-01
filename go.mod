@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/mojocn/base64Captcha v1.3.5
-	github.com/rogeecn/atom v1.0.4
+	github.com/rogeecn/atom v1.0.6
 )
 
 require (
