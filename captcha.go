@@ -27,10 +27,22 @@ func Provide(opts ...opt.Option) error {
 		return err
 	}
 
+	if conf.Long == 0 {
+		conf.Long = 4
+	}
+
+	if conf.Width == 0 {
+		conf.Width = 240
+	}
+
+	if conf.Height == 0 {
+		conf.Height = 80
+	}
+
 	return container.Container.Provide(func() (*Captcha, error) {
 		driver := base64Captcha.NewDriverDigit(
-			int(conf.Width),
 			int(conf.Height),
+			int(conf.Width),
 			int(conf.Long),
 			conf.MaxScrew,
 			conf.DotCount,
